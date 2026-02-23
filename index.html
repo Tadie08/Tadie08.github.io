@@ -8,36 +8,48 @@
 </head>
 <body>
 
+<!-- 🌸 NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Tadiwa</div>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <button id="darkToggle">🌙</button>
+</nav>
+
 <!-- 🌸 HERO -->
 <section class="hero">
   <div class="hero-text">
-    <p class="hello">👋Hey, I'm</p>
-    <h1>Tadiwa</h1>
-    <h3>Computer Engineering Graduate |Asia Pacific University 💼✨</h3>
+    <p>👋Hey, I'm</p>
+    <h1>Tadiwanashe Shamba</h1>
+    <h3>Computer Engineering Graduate|Asia Pacific University 💼✨</h3>
     <p class="tagline">
-      |Embedded Systems & AI Enthusiast |Passionate developer transforming ideas into realworld solutions
-      Asia Pacific University
+      Embedded Systems & AI Enthusiast, passionate about transforming 
+      ideas into real world solutions.
     </p>
 
-    <a href="#projects" class="btn">View My Work 🌸↓</a>
+    <a href="#projects" class="btn">View My Work🌸↓</a>
   </div>
 
   <div class="hero-img">
-    <!-- 🔥 REPLACE THIS IMAGE -->
     <img src="profile.jpg" alt="Tadiwa">
   </div>
 </section>
 
 <!-- 🌸 ABOUT -->
-<section class="about">
+<section id="about" class="about">
   <h2>Discover Me</h2>
 
   <div class="about-card">
     <img src="profile.jpg" alt="Tadiwa">
-
     <p>
-      Computer Engineering undergraduate pursuing a Dual Degree (Malaysia & UK) 
-      with handson experience in software development, system design, and 
+      Computer Engineering graduate pursuing a Dual Degree (Malaysia & UK) 
+      with hands on experience in software development, system design, and 
       engineering internships. Completed a six month internship contributing 
       to real world engineering projects. Strong interest in software systems, 
       embedded solutions, and full stack development.
@@ -47,12 +59,32 @@
 
 <!-- 🌸 PROJECTS -->
 <section id="projects" class="projects">
-  <h2>My Work</h2>
+  <h2>Featured Work</h2>
   <div id="repo-container" class="repo-grid"></div>
 </section>
 
-<!-- 🌸 LINKS -->
-<section class="links">
+<!-- 🌸 SKILLS -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="bar"><div class="progress js"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>Python</p>
+    <div class="bar"><div class="progress py"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>Embedded Systems</p>
+    <div class="bar"><div class="progress embed"></div></div>
+  </div>
+</section>
+
+<!-- 🌸 CONTACT -->
+<section id="contact" class="links">
   <h2>Connect With Me</h2>
 
   <div class="link-buttons">
@@ -65,6 +97,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
