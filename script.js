@@ -5,17 +5,16 @@ toggle.addEventListener("click", () => {
 });
 
 // 🎬 SCROLL REVEAL
-const revealSections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section:not(.hero)");
 
 function revealOnScroll(){
   const triggerBottom = window.innerHeight * 0.85;
 
-  revealSections.forEach(section => {
+  sections.forEach(section => {
     const sectionTop = section.getBoundingClientRect().top;
 
     if(sectionTop < triggerBottom){
-      section.style.opacity = 1;
-      section.style.transform = "translateY(0)";
+      section.classList.add("show");
     }
   });
 }
@@ -23,33 +22,15 @@ function revealOnScroll(){
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
-// 🚀 FETCH FEATURED GITHUB PROJECTS
-const username = "Tadie08";
-const container = document.getElementById("repo-container");
+// 📊 SKILL BAR ANIMATION
+const skills = document.querySelectorAll(".progress");
 
-fetch(`https://api.github.com/users/${username}/repos`)
-  .then(res => res.json())
-  .then(data => {
-
-    const filtered = data
-      .filter(repo => !repo.fork)
-      .sort((a,b) => b.stargazers_count - a.stargazers_count)
-      .slice(0,6);
-
-    filtered.forEach(repo => {
-      const card = document.createElement("div");
-      card.className = "repo-card";
-
-      card.innerHTML = `
-        <h3>${repo.name}</h3>
-        <p>${repo.description || "No description available."}</p>
-        <a href="${repo.html_url}" target="_blank">View Repository →</a>
-      `;
-
-      container.appendChild(card);
-    });
-
-  })
-  .catch(() => {
-    container.innerHTML = "Unable to load projects.";
+function animateSkills(){
+  skills.forEach(skill => {
+    skill.style.width = skill.classList.contains("js") ? "85%" :
+                        skill.classList.contains("py") ? "90%" :
+                        "80%";
   });
+}
+
+window.addEventListener("scroll", animateSkills);
