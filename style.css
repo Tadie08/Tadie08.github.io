@@ -1,70 +1,134 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #2b0a3d, #4b1d6b, #6a2c91);
-    color: white;
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#fff6fb;
+  color:#333;
+  scroll-behavior:smooth;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+/* 🌸 HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:60px 8%;
+  flex-wrap:wrap;
 }
 
-.hero h1 {
-    font-size: 56px;
-    margin: 10px 0;
-    font-weight: bold;
+.hero-text h1{
+  font-size:56px;
+  color:#ff4fa3;
 }
 
-.hero h3 {
-    color: #d8c8ff;
-    margin-bottom: 15px;
+.hero-text h3{
+  margin:10px 0;
+  color:#555;
 }
 
-.desc {
-    max-width: 520px;
-    margin: 0 auto;
-    line-height: 1.6;
-    opacity: 0.9;
+.tagline{
+  max-width:420px;
+  margin:15px 0;
 }
 
-.buttons {
-    margin-top: 35px;
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  background:#ff8fcf;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  transition:0.3s;
 }
 
-.btn {
-    padding: 14px 28px;
-    border-radius: 12px;
-    text-decoration: none;
-    margin: 8px;
-    display: inline-block;
-    transition: 0.3s ease;
-    font-weight: 600;
+.btn:hover{
+  transform:translateY(-3px);
+  background:#ff6bb8;
 }
 
-.primary {
-    background: linear-gradient(45deg, #ff7a18, #ffb347);
-    color: white;
+/* 🌸 HERO IMAGE */
+.hero-img img{
+  width:260px;
+  border-radius:50%;
+  box-shadow:0 20px 40px rgba(255,105,180,0.25);
+  animation:float 4s ease-in-out infinite;
 }
 
-.primary:hover {
-    transform: translateY(-3px);
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
 }
 
-.secondary {
-    border: 1px solid rgba(255,255,255,0.4);
-    color: white;
+/* 🌸 ABOUT */
+.about{
+  padding:80px 8%;
+  text-align:center;
 }
 
-.secondary:hover {
-    background: rgba(255,255,255,0.1);
+.about-card{
+  max-width:700px;
+  margin:30px auto;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-card img{
+  width:120px;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+
+/* 🌸 PROJECTS */
+.projects{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.repo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.repo-card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.25s;
+}
+
+.repo-card:hover{
+  transform:translateY(-6px);
+}
+
+.repo-card a{
+  color:#ff4fa3;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* 🌸 LINKS */
+.links{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.link-buttons a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 24px;
+  background:#ff8fcf;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
 }
