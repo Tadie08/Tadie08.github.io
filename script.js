@@ -4,7 +4,7 @@ toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
-// 🚀 FETCH FEATURED GITHUB PROJECTS
+// 🚀 FETCH GITHUB PROJECTS
 const username = "Tadie08";
 const container = document.getElementById("repo-container");
 
@@ -17,6 +17,8 @@ fetch(`https://api.github.com/users/${username}/repos`)
       .sort((a,b) => b.stargazers_count - a.stargazers_count)
       .slice(0,6);
 
+    container.innerHTML = "";
+
     filtered.forEach(repo => {
       const card = document.createElement("div");
       card.className = "repo-card";
@@ -26,6 +28,7 @@ fetch(`https://api.github.com/users/${username}/repos`)
         <p>${repo.description || "No description available."}</p>
       `;
 
+      // whole card clickable
       card.addEventListener("click", () => {
         window.open(repo.html_url, "_blank");
       });
@@ -35,5 +38,5 @@ fetch(`https://api.github.com/users/${username}/repos`)
 
   })
   .catch(() => {
-    container.innerHTML = "Unable to load projects.";
+    container.innerHTML = "<p>Unable to load projects.</p>";
   });
