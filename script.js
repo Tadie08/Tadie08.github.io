@@ -4,33 +4,36 @@ toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
-// 🎬 SCROLL REVEAL
-const sections = document.querySelectorAll("section:not(.hero)");
+// 🚀 FETCH FEATURED GITHUB PROJECTS
+const username = "Tadie08";
+const container = document.getElementById("repo-container");
 
-function revealOnScroll(){
-  const triggerBottom = window.innerHeight * 0.85;
+fetch(`https://api.github.com/users/${username}/repos`)
+  .then(res => res.json())
+  .then(data => {
 
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
+    const filtered = data
+      .filter(repo => !repo.fork)
+      .sort((a,b) => b.stargazers_count - a.stargazers_count)
+      .slice(0,6);
 
-    if(sectionTop < triggerBottom){
-      section.classList.add("show");
-    }
+    filtered.forEach(repo => {
+      const card = document.createElement("div");
+      card.className = "repo-card";
+
+      card.innerHTML = `
+        <h3>${repo.name}</h3>
+        <p>${repo.description || "No description available."}</p>
+      `;
+
+      card.addEventListener("click", () => {
+        window.open(repo.html_url, "_blank");
+      });
+
+      container.appendChild(card);
+    });
+
+  })
+  .catch(() => {
+    container.innerHTML = "Unable to load projects.";
   });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-// 📊 SKILL BAR ANIMATION
-const skills = document.querySelectorAll(".progress");
-
-function animateSkills(){
-  skills.forEach(skill => {
-    skill.style.width = skill.classList.contains("js") ? "85%" :
-                        skill.classList.contains("py") ? "90%" :
-                        "80%";
-  });
-}
-
-window.addEventListener("scroll", animateSkills);
