@@ -228,7 +228,7 @@ footer span{color:var(--pink);}
     <div class="hero-eyebrow"><span class="eyebrow-line"></span>Welcome to my portfolio<span class="eyebrow-line"></span></div>
     <h1>Tadiwanashe<em class="last-name">Shamba.</em></h1>
     <div class="typing-wrapper">I build <span class="typing-text" id="typingText"></span><span class="cursor-blink"></span></div>
-    <p class="tagline">Computer Engineering student at APU Malaysia, originally from Zimbabwe — passionate about technology that creates real impact in developing regions.</p>
+    <p class="tagline">Computer Engineering student at APU Malaysia, originally from Zimbabwe passionate about technology that creates real impact in developing regions.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn">View My Work <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -236,7 +236,7 @@ footer span{color:var(--pink);}
   </div>
   <div class="hero-img">
     <div class="img-frame">
-      <img src="your-photo.jpg" alt="Tadiwanashe Shamba"/>
+      <img src="profile.jpg" alt="Tadiwanashe Shamba"/>
     </div>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">5</div><div class="stat-label">Projects</div></div>
@@ -255,10 +255,10 @@ footer span{color:var(--pink);}
   </div>
   <div class="about-inner">
     <div class="about-img-wrap">
-      <img src="your-photo.jpg" alt="Tadiwanashe"/>
+      <img src="profile1.jpg"
     </div>
     <div class="about-content">
-      <p>I'm a Final Year Computer Engineering student at Asia Pacific University (APU), Malaysia, originally from Zimbabwe 🇿🇼. I specialise in building intelligent systems — from IoT-based security gates to full-stack web platforms and machine learning pipelines.</p>
+      <p>I'm a Final Year Computer Engineering student at Asia Pacific University (APU), Malaysia. I specialise in building intelligent systems from IoT-based security gates to full-stack web platforms and machine learning pipelines.</p>
       <p>My driving purpose is to engineer solutions that make a tangible difference in developing regions, where access to technology can transform communities. Every project I build carries that mission.</p>
       <div class="about-tags">
         <span class="tag">IoT & Embedded</span>
@@ -268,7 +268,7 @@ footer span{color:var(--pink);}
         <span class="tag">Data Science</span>
         <span class="tag">YOLOv5</span>
         <span class="tag">MQTT / IoT</span>
-        <span class="tag">Zimbabwe 🇿🇼</span>
+        <span class="tag">Zimbabwe </span>
       </div>
     </div>
   </div>
@@ -371,16 +371,16 @@ footer span{color:var(--pink);}
   <div class="contact-grid">
     <div class="contact-info">
       <h3>Let's build something great together.</h3>
-      <p>Whether you want to collaborate on a project, ask about my work, or just say hello — my inbox is always open.</p>
+      <p>Whether you want to collaborate on a project, ask about my work, or just say hello my inbox is always open.</p>
       <div class="social-links">
         <a class="social-link" href="https://github.com/Tadie08" target="_blank"><span class="link-icon">🐙</span> GitHub — Tadie08</a>
         <a class="social-link" href="https://www.linkedin.com/in/tadiwanashe-shamba-a1b165274/" target="_blank"><span class="link-icon">💼</span> LinkedIn — Tadiwanashe Shamba</a>
-        <a class="social-link" href="mailto:your-email@example.com"><span class="link-icon">✉️</span> your-email@example.com</a>
+        <a class="social-link" href="shambatadiwanashe02@gmail.com"><span class="link-icon">✉️</span> shambatadiwanashe02@gmail.com</a>
       </div>
     </div>
     <div class="contact-form">
-      <div class="form-group"><label>Your Name</label><input type="text" placeholder="John Doe"/></div>
-      <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com"/></div>
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Waddison"/></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="waddison@example.com"/></div>
       <div class="form-group"><label>Message</label><textarea placeholder="Hi Tadiwanashe, I'd love to..."></textarea></div>
       <button class="btn-submit" onclick="handleSubmit()">Send Message →</button>
     </div>
